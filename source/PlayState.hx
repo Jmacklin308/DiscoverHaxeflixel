@@ -8,11 +8,7 @@ import flixel.FlxG;
 import flixel.FlxObject; // Contains some collision logic
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.math.FlxMath;
-import flixel.system.macros.FlxAssetPaths;
-import flixel.text.FlxText;
 import flixel.tile.FlxTilemap; // allow us to build a level
-import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 
 class PlayState extends FlxState
