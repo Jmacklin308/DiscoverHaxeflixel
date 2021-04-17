@@ -13,6 +13,7 @@ import flixel.system.macros.FlxAssetPaths;
 import flixel.text.FlxText;
 import flixel.tile.FlxTilemap; // allow us to build a level
 import flixel.ui.FlxButton;
+import flixel.util.FlxColor;
 
 // import flixel.system.macros.FlxAssetPaths;
 class PlayState extends FlxState
@@ -40,7 +41,13 @@ class PlayState extends FlxState
 		// create a map
 		map = new FlxTilemap();
 		map.loadMapFromArray(mapData, 20, 12, AssetPaths.tiles__png, 16, 16);
-		add(map);
+		add(map); // add the tilemap to the scene
+
+		// Create the player object (FlxSprite)
+		player = new FlxSprite(64, 0);
+		player.makeGraphic(16, 16, FlxColor.RED);
+		player.acceleration.y = 420;
+		add(player); // Add player object to the scene
 	};
 
 	// Update function - called every frame
