@@ -54,31 +54,6 @@ class PlayState extends FlxState
 
 		// check for player collision with map
 		FlxG.collide(map, player);
-
-		// Ability to move the player
-		movePlayer();
-	}
-
-	//---------------------------------------------------------------------------------------------------------------------
-	// Player control function
-	private function movePlayer():Void
-	{
-		player.velocity.x = 0;
-		var playerSpeed = 80;
-		var playerJumpHeight = 200;
-
-		// Input keys
-		var key_left = FlxG.keys.pressed.LEFT;
-		var key_right = FlxG.keys.pressed.RIGHT;
-		var key_jump = FlxG.keys.pressed.SPACE;
-
-		// Check input
-		if (key_left)
-			player.velocity.x -= playerSpeed;
-		if (key_right)
-			player.velocity.x += playerSpeed;
-		if (key_jump && player.isTouching(FlxObject.FLOOR))
-			player.velocity.y -= playerJumpHeight;
 	}
 }
 //---------------------------------------------------------------------------------------------------------------------
