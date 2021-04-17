@@ -38,8 +38,9 @@ class PlayState extends FlxState
 	override public function create()
 	{
 		// create a map
-
-		super.create();
+		map = new FlxTilemap();
+		map.loadMapFromArray(mapData, 20, 12, AssetPaths.tiles__png, 16, 16);
+		add(map);
 	};
 
 	// Update function - called every frame
