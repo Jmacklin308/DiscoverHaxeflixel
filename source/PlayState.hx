@@ -30,7 +30,7 @@ class PlayState extends FlxState
 		1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 	];
 
-	// Create function - called once at beginning of scene
+	//---------------------------------------------------------------------------------------------------------------------
 	override public function create()
 	{
 		// create a map
@@ -39,12 +39,14 @@ class PlayState extends FlxState
 		add(map); // add the tilemap to the scene
 
 		// Create the player object (FlxSprite)
-		player = new FlxSprite(64, 0);
-		player.makeGraphic(16, 16, FlxColor.RED);
-		player.acceleration.y = 420;
+		player = new Player(64, 16);
 		add(player); // Add player object to the scene
+
+		// Debug message
+		FlxG.log.add("Game Started");
 	};
 
+	//---------------------------------------------------------------------------------------------------------------------
 	// Update function - called every frame
 	override public function update(elapsed:Float)
 	{
@@ -57,6 +59,7 @@ class PlayState extends FlxState
 		movePlayer();
 	}
 
+	//---------------------------------------------------------------------------------------------------------------------
 	// Player control function
 	private function movePlayer():Void
 	{
@@ -78,3 +81,4 @@ class PlayState extends FlxState
 			player.velocity.y -= playerJumpHeight;
 	}
 }
+//---------------------------------------------------------------------------------------------------------------------
