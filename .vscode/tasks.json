@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "lime",
+			"command": "test",
+			"group": "build",
+			"label": "lime: test (active configuration)"
+		},
+		{
+			"type": "lime",
+			"command": "build",
+			"targetConfiguration": "Neko",
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe",
+				"$haxe-error",
+				"$haxe-trace"
+			],
+			"label": "lime: build neko",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
