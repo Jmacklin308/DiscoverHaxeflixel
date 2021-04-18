@@ -1,7 +1,3 @@
-/*
-	This is the first game "scene" (what FlxState's are)
- */
-
 package;
 
 import flixel.FlxG;
@@ -13,37 +9,24 @@ import flixel.util.FlxColor;
 
 class PlayState extends FlxState
 {
-	var map:FlxTilemap;
-	var player:FlxSprite;
-	var mapData:Array<Int> = [
-		1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-		1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-		1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-		1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
-		1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
-		1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-		1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-		1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-		1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-		1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-		1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-		1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-	];
+	public var map:FlxTilemap;
+	public var player:FlxSprite;
 
-	//---------------------------------------------------------------------------------------------------------------------
-	override public function create()
+	// * ---------------------------------------------------------------------------------------------------------------------
+	override public function create():Void
 	{
-		// create a map
-		map = new FlxTilemap();
-		map.loadMapFromArray(mapData, 20, 12, AssetPaths.tiles__png, 16, 16);
-		add(map); // add the tilemap to the scene
-
 		// Create the player object (FlxSprite)
-		player = new Player(64, 16);
-		add(player); // Add player object to the scene
+		player = new Player(FlxG.width * 0.5, 10);
+
+		// create the map using level loader
+		LevelLoader.loadLevel(this, "playground");
+
+		// Add player object to the scene
+		add(player);
 
 		// Debug message
 		FlxG.log.add("Game Started");
+		super.create();
 	};
 
 	//---------------------------------------------------------------------------------------------------------------------

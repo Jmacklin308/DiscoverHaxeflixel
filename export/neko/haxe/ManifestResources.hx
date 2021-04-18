@@ -95,9 +95,9 @@ null
 #if flash
 
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_level1_tmx extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_level2_tmx extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_level3_tmx extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_fromsource_level1_tmx extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_fromsource_level2_tmx extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_fromsource_level3_tmx extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_pixel_font_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_icons_android_icon_144_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_icons_android_icon_192_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -141,6 +141,8 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_player_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_title_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_levels_playground_tmx extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_levels_tileset_tsx extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_pixelland_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_pixelland_ogg extends null { }
